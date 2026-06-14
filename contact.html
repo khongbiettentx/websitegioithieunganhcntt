@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ & Góp ý | ITInsight</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ── Contact page extras ── */
+
+      .contact-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      /* Thẻ thông tin nhỏ */
+      .ci-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        background: var(--bg);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+      }
+
+      .ci-icon {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        background: rgba(37, 99, 235, 0.22);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ci-card h4 {
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--txt2);
+        margin-bottom: 0.25rem;
+      }
+
+      .ci-card p {
+        font-size: 0.9rem;
+        color: var(--txt);
+        line-height: 1.55;
+      }
+
+      /* Thẻ sinh viên */
+      .student-card {
+        background: var(--bg);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 12px;
+        padding: 1.25rem;
+      }
+
+      .student-card h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--txt2);
+        margin-bottom: 0.9rem;
+      }
+
+      .student-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.55rem 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      }
+
+      .student-row:last-of-type {
+        border-bottom: none;
+      }
+
+      .student-row strong {
+        font-size: 0.9rem;
+        color: var(--txt);
+      }
+
+      .student-row span {
+        font-size: 0.75rem;
+        color: var(--txt2);
+      }
+
+      .gvhd {
+        margin-top: 0.9rem;
+        padding-top: 0.9rem;
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+        font-size: 0.82rem;
+        color: var(--txt2);
+        line-height: 1.55;
+      }
+
+      /* Form wrapper */
+      .form-box {
+        background: var(--bg2);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 20px;
+        padding: 2rem;
+      }
+
+      .form-box h2 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--txt);
+        margin-bottom: 0.35rem;
+      }
+
+      .form-box > p {
+        font-size: 0.88rem;
+        color: var(--txt2);
+        margin-bottom: 1.5rem;
+      }
+
+      .fg {
+        margin-bottom: 1.1rem;
+      }
+
+      .fg label {
+        display: block;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--txt2);
+        margin-bottom: 0.4rem;
+      }
+
+      .fg label .req {
+        color: #ef4444;
+        margin-left: 2px;
+      }
+
+      .fc {
+        width: 100%;
+        background: var(--bg);
+        border: 1.5px solid rgba(148, 163, 184, 0.25);
+        border-radius: 6px;
+        color: var(--txt);
+        font-family: inherit;
+        font-size: 0.93rem;
+        padding: 0.7rem 0.95rem;
+        outline: none;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        resize: none;
+      }
+
+      .fc::placeholder {
+        color: var(--txt2);
+        font-size: 0.88rem;
+      }
+      .fc:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.22);
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .stars {
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        margin-top: 0.3rem;
+      }
+
+      .stars label {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.85rem;
+        color: var(--txt2);
+        font-weight: normal;
+        cursor: pointer;
+        margin: 0;
+      }
+
+      .stars input {
+        accent-color: var(--accent);
+      }
+      .rating-icons {
+        display: inline-flex;
+        gap: 0.12rem;
+        color: var(--accent);
+      }
+
+      .btn-submit {
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 0.85rem;
+        font-size: 0.97rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .notice {
+        font-size: 0.78rem;
+        color: var(--txt2);
+        margin-top: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      /* Success message */
+      .success-msg {
+        display: none;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .success-msg .icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.6rem;
+      }
+      .success-msg h3 {
+        color: #10b981;
+        font-size: 1.15rem;
+        margin-bottom: 0.4rem;
+      }
+      .success-msg p {
+        font-size: 0.88rem;
+        color: var(--txt2);
+      }
+
+      /* FAQ */
+      .faq-list {
+        max-width: 720px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .faq-item {
+        background: var(--bg);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 12px;
+        padding: 1.1rem 1.25rem;
+      }
+
+      .faq-item h4 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--txt);
+        margin-bottom: 0.35rem;
+      }
+
+      .faq-item p {
+        font-size: 0.86rem;
+        color: var(--txt2);
+        line-height: 1.65;
+      }
+
+      /* Bản đồ */
+      .map-box {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+      }
+
+      .map-box iframe {
+        display: block;
+        width: 100%;
+        height: 380px;
+        border: 0;
+      }
+
+      .map-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 0.9rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .contact-wrap {
+          grid-template-columns: 1fr;
+        }
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+        .map-box iframe {
+          height: 280px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <nav class="nav-wrapper">
+        <a href="index.html" class="nav-brand">
+          <div class="brand-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="brand-name">IT<span>Insight</span></div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li class="nav-item has-dropdown">
+            <div class="nav-link-row">
+              <a href="categories.html" class="nav-link">Các mảng ngành</a>
+              <button class="dropdown-toggle" type="button" aria-label="Mở danh mục con">
+                <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+              </button>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a href="categories.html#mang-01" class="dropdown-link">Phát triển Phần mềm</a></li>
+              <li><a href="categories.html#mang-02" class="dropdown-link">AI &amp; Khoa học Dữ liệu</a></li>
+              <li><a href="categories.html#mang-03" class="dropdown-link">An ninh Mạng</a></li>
+              <li><a href="categories.html#mang-04" class="dropdown-link">Mạng &amp; Điện toán đám mây</a></li>
+              <li><a href="categories.html#mang-05" class="dropdown-link">Kiểm thử Phần mềm</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <div class="nav-link-row">
+              <a href="future.html" class="nav-link">Tiềm năng tương lai</a>
+              <button class="dropdown-toggle" type="button" aria-label="Mở danh mục con">
+                <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+              </button>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a href="future.html#xu-huong" class="dropdown-link">Xu hướng công nghệ</a></li>
+              <li><a href="future.html#co-hoi" class="dropdown-link">Cơ hội nghề nghiệp</a></li>
+              <li><a href="future.html#thach-thuc" class="dropdown-link">Thách thức &amp; Áp lực</a></li>
+              <li><a href="future.html#loi-khuyen" class="dropdown-link">Lời khuyên thực tiễn</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="nav-link active">Liên hệ</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="page-hero-label">Liên hệ &amp; Góp ý</span>
+        <h1 class="page-hero-title">
+          Chúng tôi trân trọng <span>ý kiến của bạn</span>
+        </h1>
+        <p class="page-hero-desc">
+          Mọi phản hồi, góp ý hay câu hỏi về nội dung báo cáo đều giúp chúng tôi
+          hoàn thiện tài liệu ngày một tốt hơn.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Trang chủ</a>
+          <span><i class="fa-solid fa-angle-right"></i></span>
+          <span>Liên hệ</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-wrap">
+          <!-- ── CỘT TRÁI: Thông tin ── -->
+          <div style="display: flex; flex-direction: column; gap: 1rem">
+            <div>
+              <span class="label">Thông tin liên hệ</span>
+              <h2
+                class="title"
+                style="font-size: 1.5rem; text-align: left; margin-top: 0.6rem"
+              >
+                Thông tin <span>người thực hiện</span>
+              </h2>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: var(--txt2);
+                  margin-top: 0.5rem;
+                  line-height: 1.7;
+                "
+              >
+                Báo cáo được thực hiện trong khuôn khổ môn học
+                <strong style="color: var(--txt)"
+                  >Nhập môn Công nghệ Thông tin</strong
+                >, năm học 2026 – 2027.
+              </p>
+            </div>
+
+            <!-- Địa chỉ -->
+            <div class="ci-card">
+              <div class="ci-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h4>Địa chỉ trường</h4>
+                <p>
+                  Học Viện Phụ Nữ Việt Nam<br />
+                  68 Nguyễn Chí Thanh, Láng Thượng, Đống Đa<br />
+                  Hà Nội, Việt Nam
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="ci-card">
+              <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4>Email liên hệ</h4>
+                <p>
+                  972007tx@gmail.com <br /><span
+                    style="font-size: 0.8rem; color: var(--txt2)"
+                    >Phản hồi trong 1–2 ngày làm việc</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- Website -->
+            <div class="ci-card">
+              <div class="ci-icon"><i class="fa-solid fa-globe"></i></div>
+              <div>
+                <h4>Website trường</h4>
+                <p>
+                  <a
+                    href="https://hvpnvn.edu.vn"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: var(--accent)"
+                    >hvpnvn.edu.vn</a
+                  >
+                  <br /><span style="font-size: 0.8rem; color: var(--txt2)"
+                    >Thông tin chính thức nhà trường</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- Thành viên -->
+            <div class="student-card">
+              <h4>Người thực hiện</h4>
+
+              <div class="student-row">
+                <div>
+                  <strong>Nguyễn Quốc Trung</strong><br />
+                  <span>MSSV: 2574820220</span>
+                </div>
+                <span class="badge">Cá nhân</span>
+              </div>
+
+              <div class="gvhd">
+                <strong style="color: var(--txt2)">Giáo viên hướng dẫn:</strong
+                ><br />
+                TS. Vũ Quang Hưng — Viện Công Nghệ Thông Tin
+              </div>
+            </div>
+          </div>
+
+          <!-- ── CỘT PHẢI: Form ── -->
+          <div class="form-box">
+            <h2>Gửi góp ý cho chúng tôi</h2>
+            <p>
+              Điền thông tin bên dưới, chúng tôi sẽ phản hồi sớm nhất có thể.
+            </p>
+
+            <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+              <div class="two-col">
+                <div class="fg">
+                  <label for="fullName"
+                    >Họ và tên <span class="req">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fullName"
+                    class="fc"
+                    placeholder="Nguyễn Văn A"
+                    required
+                  />
+                </div>
+                <div class="fg">
+                  <label for="email">Email <span class="req">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="fc"
+                    placeholder="example@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="fg">
+                <label for="subject">Chủ đề <span class="req">*</span></label>
+                <select id="subject" class="fc" required>
+                  <option value="" disabled selected>Chọn chủ đề góp ý…</option>
+                  <option value="content">
+                    Nội dung cần bổ sung / chỉnh sửa
+                  </option>
+                  <option value="design">Góp ý giao diện / thiết kế</option>
+                  <option value="category">
+                    Thông tin các mảng chuyên ngành
+                  </option>
+                  <option value="future">Phần tiềm năng tương lai</option>
+                  <option value="other">Ý kiến khác</option>
+                </select>
+              </div>
+
+              <div class="fg">
+                <label for="organization"
+                  >Trường / Đơn vị
+                  <span style="color: var(--txt2); font-weight: 400"
+                    >(không bắt buộc)</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="organization"
+                  class="fc"
+                  placeholder="Tên trường hoặc tổ chức của bạn"
+                />
+              </div>
+
+              <div class="fg">
+                <label for="message"
+                  >Nội dung góp ý <span class="req">*</span></label
+                >
+                <textarea
+                  id="message"
+                  class="fc"
+                  rows="5"
+                  placeholder="Chia sẻ nhận xét, ý kiến hoặc câu hỏi của bạn về báo cáo…"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="fg">
+                <label>Đánh giá tổng thể</label>
+                <div class="stars">
+                  <label
+                    ><input type="radio" name="rating" value="5" />
+                    <span class="rating-icons"
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                    ></span>
+                    Xuất sắc</label
+                  >
+                  <label
+                    ><input type="radio" name="rating" value="4" />
+                    <span class="rating-icons"
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                    ></span>
+                    Tốt</label
+                  >
+                  <label
+                    ><input type="radio" name="rating" value="3" />
+                    <span class="rating-icons"
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                    ></span>
+                    Trung bình</label
+                  >
+                  <label
+                    ><input type="radio" name="rating" value="2" />
+                    <span class="rating-icons"
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                    ></span>
+                    Cần cải thiện</label
+                  >
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                Gửi góp ý <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <p class="notice">
+                <i class="fa-solid fa-lock"></i> Thông tin của bạn được bảo mật,
+                chỉ dùng để phản hồi góp ý.
+              </p>
+            </form>
+
+            <div class="success-msg" id="successMsg">
+              <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h3>Gửi thành công!</h3>
+              <p>
+                Cảm ơn bạn đã góp ý. Chúng tôi sẽ phản hồi trong 1–2 ngày làm
+                việc qua email bạn đã cung cấp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <div class="th">
+          <span class="label">Vị trí</span>
+          <h2 class="title">
+            Bản đồ <span>nhà trường</span>
+          </h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="map-box">
+          <iframe
+            src="https://www.google.com/maps?q=H%E1%BB%8Dc+Vi%E1%BB%87n+Ph%E1%BB%A5+N%E1%BB%AF+Vi%E1%BB%87t+Nam,+68+Nguy%E1%BB%85n+Ch%C3%AD+Thanh,+L%C3%A1ng+Th%C6%B0%E1%BB%A3ng,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i&output=embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Bản đồ Học Viện Phụ Nữ Việt Nam"
+          ></iframe>
+        </div>
+
+        <div style="text-align: center">
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/search/?api=1&query=H%E1%BB%8Dc+Vi%E1%BB%87n+Ph%E1%BB%A5+N%E1%BB%AF+Vi%E1%BB%87t+Nam,+68+Nguy%E1%BB%85n+Ch%C3%AD+Thanh,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-solid fa-up-right-from-square"></i> Mở trong Google
+            Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section
+      class="section"
+      style="
+        background: var(--bg2);
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+      "
+    >
+      <div class="container">
+        <div class="th">
+          <span class="label">Câu hỏi thường gặp</span>
+          <h2 class="title">Giải đáp <span>thắc mắc</span></h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h4>Báo cáo này có thể dùng cho mục đích học tập không?</h4>
+            <p>
+              Có. Toàn bộ nội dung được thực hiện với mục đích học thuật. Bạn có
+              thể tham khảo với điều kiện ghi rõ nguồn. Không dùng cho mục đích
+              thương mại.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Số liệu trong báo cáo có được cập nhật không?</h4>
+            <p>
+              Số liệu được tổng hợp từ các báo cáo uy tín (WEF, Gartner, TopDev,
+              ITviec) giai đoạn 2024–2025. Thị trường CNTT thay đổi nhanh nên
+              một số con số mang tính tham khảo.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Làm sao để tải báo cáo dạng PDF?</h4>
+            <p>
+              Dùng chức năng "In trang" (Ctrl+P) của trình duyệt, chọn "Lưu dưới
+              dạng PDF" để có bản offline đầy đủ.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Tôi có thể đóng góp nội dung vào báo cáo không?</h4>
+            <p>
+              Rất hoan nghênh! Hãy gửi email hoặc điền form bên trên. Chúng tôi
+              sẽ liên hệ thảo luận chi tiết.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-brand">
+              <div class="brand-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="brand-name">IT<span>Insight</span></div>
+            </a>
+            <p>
+              Báo cáo chuyên đề tổng quan ngành Công nghệ Thông tin — tài liệu
+              học thuật, năm học 2026–2027.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Điều hướng</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="categories.html">Các mảng ngành</a></li>
+              <li><a href="future.html">Tiềm năng tương lai</a></li>
+              <li><a href="contact.html">Liên hệ &amp; Góp ý</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Thông tin báo cáo</h4>
+            <ul class="footer-links">
+              <li><a href="#">Môn học: Nhập môn CNTT</a></li>
+              <li><a href="#">Năm học: 2026 – 2027</a></li>
+              <li><a href="#">Trường: Học Viện Phụ Nữ VN</a></li>
+              <li><a href="contact.html">Góp ý nội dung</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2027 ITInsight · Thực hiện bởi <a href="#">Nguyễn Quốc Trung</a> —
+            MSSV 2574820220
+          </p>
+          <p>Tài liệu học thuật — Không sử dụng cho mục đích thương mại.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile nav
+      const toggle = document.getElementById("navToggle");
+      const menu = document.getElementById("navMenu");
+      toggle.addEventListener("click", () => menu.classList.toggle("open"));
+      menu
+        .querySelectorAll(".nav-link")
+        .forEach((l) =>
+          l.addEventListener("click", () => menu.classList.remove("open")),
+        );
+
+      // Submenu (dropdown) handling
+      document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          btn.closest(".nav-item").classList.toggle("open");
+        });
+      });
+      menu
+        .querySelectorAll(".dropdown-link")
+        .forEach((l) =>
+          l.addEventListener("click", () => menu.classList.remove("open")),
+        );
+
+      // Form submit
+      function handleSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+          alert("Vui lòng điền đầy đủ các trường bắt buộc (*).");
+          return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          alert("Vui lòng nhập email hợp lệ.");
+          return;
+        }
+
+        document.getElementById("contactForm").style.display = "none";
+        const msg = document.getElementById("successMsg");
+        msg.style.display = "block";
+        msg.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    </script>
+  </body>
+</html>

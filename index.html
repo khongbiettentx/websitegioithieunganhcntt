@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Tổng quan Ngành CNTT | ITInsight</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-wrapper">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <div class="brand-name">IT<span>Insight</span></div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Trang chủ</a></li>
+        <li class="nav-item has-dropdown">
+          <div class="nav-link-row">
+            <a href="categories.html" class="nav-link">Các mảng ngành</a>
+            <button class="dropdown-toggle" type="button" aria-label="Mở danh mục con">
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="categories.html#mang-01" class="dropdown-link">Phát triển Phần mềm</a></li>
+            <li><a href="categories.html#mang-02" class="dropdown-link">AI &amp; Khoa học Dữ liệu</a></li>
+            <li><a href="categories.html#mang-03" class="dropdown-link">An ninh Mạng</a></li>
+            <li><a href="categories.html#mang-04" class="dropdown-link">Mạng &amp; Điện toán đám mây</a></li>
+            <li><a href="categories.html#mang-05" class="dropdown-link">Kiểm thử Phần mềm</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-dropdown">
+          <div class="nav-link-row">
+            <a href="future.html" class="nav-link">Tiềm năng tương lai</a>
+            <button class="dropdown-toggle" type="button" aria-label="Mở danh mục con">
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="future.html#xu-huong" class="dropdown-link">Xu hướng công nghệ</a></li>
+            <li><a href="future.html#co-hoi" class="dropdown-link">Cơ hội nghề nghiệp</a></li>
+            <li><a href="future.html#thach-thuc" class="dropdown-link">Thách thức &amp; Áp lực</a></li>
+            <li><a href="future.html#loi-khuyen" class="dropdown-link">Lời khuyên thực tiễn</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <!-- Nội dung trái -->
+        <div>
+          <div class="hero-label">Báo cáo chuyên đề · 2026–2027</div>
+          <h1 class="hero-title">
+            Công nghệ Thông tin —<br />
+            <span>Huyết mạch của Thời đại Số</span>
+          </h1>
+          <p class="hero-desc">
+            Trong thế kỷ 21, Công nghệ Thông tin là nền tảng vận hành toàn bộ
+            nền kinh tế, xã hội và văn minh nhân loại. Hãy cùng khám phá ngành
+            học đầy tiềm năng này.
+          </p>
+          <div class="hero-actions">
+            <a href="categories.html" class="btn btn-p">Khám phá các mảng ngành <i
+                class="fa-solid fa-arrow-right"></i></a>
+            <a href="future.html" class="btn btn-o">Xem tiềm năng tương lai</a>
+          </div>
+        </div>
+
+        <!-- Ảnh phải -->
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700&q=80"
+            alt="Đội ngũ lập trình viên đang làm việc" loading="lazy" />
+          <div class="hero-img-badge">
+            <div class="dot"></div>
+            <span>Ngành CNTT đang phát triển mạnh mẽ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIỚI THIỆU CNTT -->
+  <section class="section" style="
+        background: var(--bg2);
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      ">
+    <div class="container">
+      <div class="intro-grid">
+        <!-- Chữ -->
+        <div>
+          <span class="label">Định nghĩa &amp; Tổng quan</span>
+          <h2 class="title">Công nghệ Thông tin là gì?</h2>
+          <div class="bar" style="margin-left: 0"></div>
+          <p style="
+                color: var(--txt2);
+                margin-top: 1.2rem;
+                margin-bottom: 0.9rem;
+              ">
+            <strong style="color: var(--txt)">Công nghệ Thông tin (CNTT)</strong>
+            — tiếng Anh là <em>Information Technology (IT)</em> — là lĩnh vực
+            ứng dụng máy tính, mạng viễn thông, phần mềm và các hệ thống số
+            hóa để thu thập, lưu trữ, xử lý và truyền tải thông tin, phục vụ
+            mọi nhu cầu của con người và tổ chức trong thời đại số.
+          </p>
+          <p style="color: var(--txt2); margin-bottom: 0.9rem">
+            Khác với quan niệm thông thường rằng CNTT chỉ gắn với "lập trình",
+            thực tế ngành này bao phủ một phổ rộng lớn: từ thiết kế hệ thống
+            hạ tầng, phân tích dữ liệu khổng lồ, bảo vệ an ninh không gian
+            mạng, cho đến xây dựng các ứng dụng trí tuệ nhân tạo và kết nối
+            hàng tỷ thiết bị thông minh trên toàn cầu.
+          </p>
+          <ul class="check-list">
+            <li>Xử lý, lưu trữ và bảo mật dữ liệu ở quy mô lớn</li>
+            <li>
+              Tự động hóa quy trình, nâng cao năng suất lao động toàn xã hội
+            </li>
+            <li>
+              Kết nối con người và tổ chức xuyên biên giới không giới hạn
+            </li>
+            <li>
+              Nền tảng phát triển của AI, IoT, và Điện toán đám mây,...
+            </li>
+          </ul>
+        </div>
+
+        <!-- Visual grid -->
+        <div class="intro-visual">
+          <div class="info-card fade-in">
+            <div class="icon"><i class="fa-solid fa-desktop"></i></div>
+            <h4>Phần cứng</h4>
+            <p>
+              Máy tính, máy chủ, chip vi xử lý và các thiết bị lưu trữ vật lý.
+            </p>
+          </div>
+          <div class="info-card fade-in">
+            <div class="icon"><i class="fa-solid fa-gears"></i></div>
+            <h4>Phần mềm</h4>
+            <p>Hệ điều hành, ứng dụng, ngôn ngữ lập trình và thuật toán.</p>
+          </div>
+          <div class="info-card fade-in">
+            <div class="icon"><i class="fa-solid fa-globe"></i></div>
+            <h4>Mạng &amp; Kết nối</h4>
+            <p>Internet, LAN/WAN, giao thức truyền thông và viễn thông.</p>
+          </div>
+          <div class="info-card fade-in">
+            <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Bảo mật</h4>
+            <p>Mã hóa, tường lửa, xác thực và phòng chống tấn công mạng.</p>
+          </div>
+          <div class="info-card fade-in">
+            <div class="icon"><i class="fa-solid fa-chart-column"></i></div>
+            <h4>Dữ liệu &amp; AI</h4>
+            <p>Phân tích dữ liệu lớn, học máy và các hệ thống thông minh.</p>
+          </div>
+          <div class="info-card fade-in">
+            <div class="icon"><i class="fa-solid fa-cloud"></i></div>
+            <h4>Điện toán đám mây</h4>
+            <p>
+              Hạ tầng, nền tảng và ứng dụng qua Internet linh hoạt, co giãn.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ỨNG DỤNG TRONG CUỘC SỐNG -->
+  <section class="section">
+    <div class="container">
+      <div class="th">
+        <span class="label">Tầm quan trọng</span>
+        <h2 class="title">CNTT hiện diện trong <span>mọi lĩnh vực</span></h2>
+        <div class="bar"></div>
+        <p class="desc" style="margin-top: 0.9rem">
+          Không có ngành nào trong nền kinh tế hiện đại có thể vận hành hiệu
+          quả nếu tách rời khỏi công nghệ thông tin.
+        </p>
+      </div>
+
+      <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+          ">
+        <div class="img-card">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=75" alt="Y tế số"
+            loading="lazy" />
+          <div class="img-card-body">
+            <h3><i class="fa-solid fa-hospital"></i> Y tế &amp; Sức khỏe</h3>
+            <p>
+              Hồ sơ bệnh án điện tử, chẩn đoán hỗ trợ bằng AI, phẫu thuật
+              robot và hệ thống giám sát sức khỏe từ xa đang cải thiện chất
+              lượng chăm sóc y tế toàn cầu.
+            </p>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&q=75" alt="Ngân hàng số"
+            loading="lazy" />
+          <div class="img-card-body">
+            <h3>
+              <i class="fa-solid fa-building-columns"></i> Tài chính &amp;
+              Ngân hàng
+            </h3>
+            <p>
+              Thanh toán điện tử, phát hiện gian lận tự động và các dịch vụ
+              ngân hàng số hóa toàn diện đang thay đổi cách con người quản lý
+              tài chính.
+            </p>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&q=75" alt="Giáo dục trực tuyến"
+            loading="lazy" />
+          <div class="img-card-body">
+            <h3><i class="fa-solid fa-graduation-cap"></i> Giáo dục</h3>
+            <p>
+              Nền tảng học trực tuyến, hệ thống quản lý học tập (LMS) và cá
+              nhân hóa lộ trình học tập bằng AI giúp phổ cập tri thức không
+              giới hạn địa lý.
+            </p>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=75" alt="Sản xuất công nghiệp"
+            loading="lazy" />
+          <div class="img-card-body">
+            <h3>
+              <i class="fa-solid fa-industry"></i> Sản xuất &amp; Công nghiệp
+            </h3>
+            <p>
+              Tự động hóa dây chuyền sản xuất, quản lý chuỗi cung ứng thông
+              minh và bảo trì dự đoán qua cảm biến IoT giúp tối ưu hóa hiệu
+              quả vận hành.
+            </p>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=500&q=75" alt="Giao thông thông minh"
+            loading="lazy" />
+          <div class="img-card-body">
+            <h3>
+              <i class="fa-solid fa-car-side"></i> Giao thông &amp; Logistics
+            </h3>
+            <p>
+              Xe tự lái, tối ưu hóa tuyến đường giao hàng bằng thuật toán và
+              hệ thống đèn giao thông thông minh đang định hình đô thị tương
+              lai.
+            </p>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&q=75" alt="Game và giải trí số"
+            loading="lazy" />
+          <div class="img-card-body">
+            <h3>
+              <i class="fa-solid fa-gamepad"></i> Giải trí &amp; Sáng tạo
+            </h3>
+            <p>
+              Streaming âm nhạc, phim ảnh, game trực tuyến, thực tế ảo VR/AR
+              và các mạng xã hội kết nối hàng tỷ người dùng trên toàn thế
+              giới.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section" style="
+        background: var(--bg2);
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+      ">
+    <div class="container">
+      <div style="
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            max-height: 280px;
+          ">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
+          alt="Đội ngũ CNTT làm việc nhóm" style="
+              width: 100%;
+              height: 280px;
+              object-fit: cover;
+              object-position: center 40%;
+            " loading="lazy" />
+        <div style="
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(
+                to right,
+                rgba(15, 23, 42, 0.88) 40%,
+                rgba(15, 23, 42, 0.25)
+              );
+              display: flex;
+              align-items: center;
+              padding: 2.5rem;
+            ">
+          <div style="text-align: left; max-width: 520px">
+            <h2 class="title" style="margin-bottom: 0.6rem">
+              Khám phá chi tiết <span>từng mảng chuyên ngành</span>
+            </h2>
+            <p style="
+                  color: var(--txt2);
+                  font-size: 0.95rem;
+                  margin-bottom: 1.4rem;
+                ">
+              Từ phát triển phần mềm, trí tuệ nhân tạo đến an ninh mạng — mỗi
+              lĩnh vực mang đến cơ hội sự nghiệp riêng biệt và đầy tiềm năng.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+              <a href="categories.html" class="btn btn-p">Xem các mảng ngành <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="future.html" class="btn btn-o">Tiềm năng tương lai</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="brand-name">IT<span>Insight</span></div>
+          </a>
+          <p>
+            Báo cáo chuyên đề tổng quan ngành Công nghệ Thông tin — tài liệu
+            học thuật, năm học 2026–2027.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Điều hướng</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="categories.html">Các mảng ngành</a></li>
+            <li><a href="future.html">Tiềm năng tương lai</a></li>
+            <li><a href="contact.html">Liên hệ &amp; Góp ý</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Thông tin báo cáo</h4>
+          <ul class="footer-links">
+            <li><a href="#">Môn học: Nhập môn CNTT</a></li>
+            <li><a href="#">Năm học: 2026 – 2027</a></li>
+            <li><a href="#">Trường: Học Viện Phụ Nữ VN</a></li>
+            <li><a href="contact.html">Góp ý nội dung</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2027 ITInsight · Thực hiện bởi
+          <a href="contact.html">Nguyễn Quốc Trung</a> — MSSV 2574820220
+        </p>
+        <p>Tài liệu học thuật — Không dùng cho mục đích thương mại.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const t = document.getElementById("navToggle"),
+      m = document.getElementById("navMenu");
+    t.addEventListener("click", () => m.classList.toggle("open"));
+    m.querySelectorAll(".nav-link").forEach((l) =>
+      l.addEventListener("click", () => m.classList.remove("open")),
+    );
+
+    // Submenu (dropdown) handling
+    document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        btn.closest(".nav-item").classList.toggle("open");
+      });
+    });
+    m.querySelectorAll(".dropdown-link").forEach((l) =>
+      l.addEventListener("click", () => m.classList.remove("open")),
+    );
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Các mảng ngành CNTT | ITInsight</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-wrapper">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <div class="brand-name">IT<span>Insight</span></div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+        <li class="nav-item has-dropdown">
+          <div class="nav-link-row">
+            <a href="categories.html" class="nav-link active">Các mảng ngành</a>
+            <button class="dropdown-toggle" type="button" aria-label="Mở danh mục con">
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="categories.html#mang-01" class="dropdown-link">Phát triển Phần mềm</a></li>
+            <li><a href="categories.html#mang-02" class="dropdown-link">AI &amp; Khoa học Dữ liệu</a></li>
+            <li><a href="categories.html#mang-03" class="dropdown-link">An ninh Mạng</a></li>
+            <li><a href="categories.html#mang-04" class="dropdown-link">Mạng &amp; Điện toán đám mây</a></li>
+            <li><a href="categories.html#mang-05" class="dropdown-link">Kiểm thử Phần mềm</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-dropdown">
+          <div class="nav-link-row">
+            <a href="future.html" class="nav-link">Tiềm năng tương lai</a>
+            <button class="dropdown-toggle" type="button" aria-label="Mở danh mục con">
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="future.html#xu-huong" class="dropdown-link">Xu hướng công nghệ</a></li>
+            <li><a href="future.html#co-hoi" class="dropdown-link">Cơ hội nghề nghiệp</a></li>
+            <li><a href="future.html#thach-thuc" class="dropdown-link">Thách thức &amp; Áp lực</a></li>
+            <li><a href="future.html#loi-khuyen" class="dropdown-link">Lời khuyên thực tiễn</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero-label">Chuyên ngành &amp; Nghề nghiệp</span>
+      <h1 class="page-hero-title">
+        Các mảng lớn trong<br /><span>ngành Công nghệ Thông tin</span>
+      </h1>
+      <p class="page-hero-desc">
+        Ngành Công nghệ Thông tin không chỉ có lập trình. Đây là một lĩnh vực rất rộng, gồm nhiều
+        hướng đi khác nhau như phát triển phần mềm, trí tuệ nhân tạo, dữ liệu, an ninh mạng, mạng máy
+        tính, điện toán đám mây và kiểm thử phần mềm. Mỗi mảng có đặc điểm riêng, yêu cầu kỹ năng
+        khác nhau và mở ra nhiều cơ hội nghề nghiệp cho sinh viên trong tương lai.
+      </p>
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a><span><i class="fa-solid fa-angle-right"></i></span><span>Các mảng
+          ngành</span>
+      </div>
+    </div>
+  </section>
+
+
+  <div style="width: 100%; height: 240px; overflow: hidden; position: relative">
+    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1400&q=75" alt="Lập trình phần mềm" style="
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 55%;
+        " loading="lazy" />
+    <div style="
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to bottom,
+            rgba(15, 23, 42, 0.05),
+            rgba(15, 23, 42, 0.65)
+          );
+        "></div>
+  </div>
+
+
+  <!-- MẢNG 1: PHÁT TRIỂN PHẦN MỀM -->
+  <section class="section" id="mang-01">
+    <div class="container">
+      <div class="th">
+        <span class="label">Mảng 01</span>
+        <h2 class="title">Phát triển <span>Phần mềm</span></h2>
+        <div class="bar"></div>
+        <p class="desc" style="margin-top: 0.9rem">
+          Xương sống của ngành CNTT — nơi ý tưởng được chuyển hóa thành sản
+          phẩm phục vụ hàng triệu người dùng trên nhiều nền tảng khác nhau.
+        </p>
+      </div>
+
+      <div style="
+            background: var(--bg2);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-left: 4px solid #3b82f6;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+          ">
+        <p style="color: var(--txt2); line-height: 1.75">
+          <strong style="color: var(--txt)">Phát triển phần mềm (Software Development)</strong>
+          là quá trình phân tích yêu cầu, thiết kế kiến trúc, lập trình, kiểm
+          thử và triển khai các ứng dụng trên nhiều nền tảng.Người làm trong lĩnh
+          vực này sẽ tạo ra các chương trình, website, ứng dụng điện thoại hoặc phần mềm dùng trong
+          doanh nghiệp.Nói đơn giản, lập trình viên là người biến ý tưởng thành sản phẩm có thể sử dụng được
+          Ví dụ: một website bán hàng, một ứng dụng đặt xe, một phần mềm quản lý
+          sinh viên hoặc một hệ thống đặt vé online đều là sản phẩm của phát triển phần mềm.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card fade-in" style="--card-color: #3b82f6">
+          <div class="card-icon" style="background: rgba(59, 130, 246, 0.15)">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3 class="card-title">Phát triển Web</h3>
+          <p class="card-desc">
+            Phát triển Web là công việc xây dựng website và ứng dụng chạy trên trình duyệt. Một website thường có hai
+            phần chính: <br><br>
+
+            <strong style="color: var(--txt);">Frontend </strong> là phần người dùng nhìn thấy và thao tác trực tiếp, ví
+            dụ như giao diện, nút bấm, menu, hình ảnh và
+            bố cục trang. Người làm Frontend thường dùng HTML, CSS và JavaScript.
+            <br><br>
+            <strong style="color: var(--txt);">Backend </strong> là phần xử lý phía sau, ví dụ như lưu thông tin tài
+            khoản, xử lý đăng nhập, tìm kiếm dữ liệu, quản
+            lý đơn hàng hoặc kết nối với cơ sở dữ liệu.
+            <br><br>
+            API có thể hiểu đơn giản là “cầu nối” giúp các phần khác nhau của phần mềm trao đổi dữ liệu với nhau. Ví dụ,
+            khi người dùng bấm nút đăng nhập, giao diện sẽ gửi thông tin đến Backend thông qua API.
+            <br><br>
+            <strong style="color: var(--txt);">Full-stack Developer </strong> là người có thể làm cả Frontend và
+            Backend. Đây là vị trí được nhiều doanh nghiệp quan
+            tâm vì có thể tham gia nhiều phần trong quá trình xây dựng website.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Frontend Developer</span>
+              <span class="tag">Backend Developer</span>
+              <span class="tag">Full-stack Developer</span>
+              <span class="tag">Web Developer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #10b981">
+          <div class="card-icon" style="background: rgba(16, 185, 129, 0.15)">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 class="card-title">Phát triển Ứng dụng Di động</h3>
+          <p class="card-desc">
+            Phát triển ứng dụng di động là công việc tạo ra các app chạy trên điện thoại thông minh. Hai nền tảng phổ
+            biến nhất hiện nay là <strong style="color: var(--txt);">Android và iOS.</strong>
+            <br><br>
+            Ứng dụng di động xuất hiện rất nhiều trong đời sống hằng ngày như app ngân hàng, app học online, app mua
+            sắm, app đặt đồ ăn, app xem phim hoặc mạng xã hội.
+            <br><br>
+            Người làm ứng dụng di động có thể lập trình riêng cho từng hệ điều hành hoặc dùng công nghệ đa nền tảng để
+            một bộ mã có thể chạy trên cả Android và iOS. Điều này giúp tiết kiệm thời gian và chi phí phát triển sản
+            phẩm.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Android Developer</span>
+              <span class="tag">iOS Developer</span>
+              <span class="tag">Flutter Developer</span>
+              <span class="tag">React Native Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #8b5cf6">
+          <div class="card-icon" style="background: rgba(139, 92, 246, 0.15)">
+            <i class="fa-solid fa-desktop"></i>
+          </div>
+          <h3 class="card-title">Phát triển Desktop &amp; Hệ thống nhúng</h3>
+          <p class="card-desc">
+            Phần mềm Desktop là các chương trình chạy trực tiếp trên máy tính, ví dụ như phần mềm kế toán, phần mềm quản
+            lý kho, phần mềm chỉnh sửa ảnh hoặc phần mềm văn phòng.
+            <br><br>
+            Hệ thống nhúng là phần mềm được cài trong các thiết bị đặc biệt như máy ATM, ô tô, thiết bị y tế, máy móc
+            công nghiệp, camera thông minh hoặc thiết bị IoT.
+            <br><br>
+            Đây là mảng ít được người mới chú ý hơn phát triển Web, nhưng lại rất quan trọng trong các ngành sản xuất, y
+            tế, giao thông và tự động hóa.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">C++ Developer</span>
+              <span class="tag">.NET Developer</span>
+              <span class="tag">Embedded Engineer</span>
+              <span class="tag">Systems Programmer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+     MẢNG 2: AI & DATA SCIENCE
+     ============================================= -->
+  <section class="section" id="mang-02" style="
+        background: var(--bg2);
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      ">
+    <div class="container">
+      <div class="th">
+        <span class="label">Mảng 02</span>
+        <h2 class="title">
+          Trí tuệ Nhân tạo &amp; <span>Khoa học Dữ liệu</span>
+        </h2>
+        <div class="bar"></div>
+        <p class="desc" style="margin-top: 0.9rem">
+          Lĩnh vực đang thay đổi thế giới nhanh nhất hiện nay — nơi máy móc
+          học được cách tư duy, dự đoán và sáng tạo.
+        </p>
+      </div>
+
+      <div style="
+            background: var(--bg);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-left: 4px solid #f59e0b;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+          ">
+        <p style="color: var(--txt2); line-height: 1.75">
+          <strong style="color: var(--txt)">Trí tuệ Nhân tạo (AI)</strong> và
+          <strong style="color: var(--txt)">Khoa học Dữ liệu (Data Science)</strong>
+          đang tạo ra một cuộc cách mạng chưa từng có. AI tập trung xây dựng
+          các hệ thống có khả năng thực hiện các nhiệm vụ đòi hỏi trí tuệ con
+          người như nhận dạng hình ảnh, xử lý ngôn ngữ, ra quyết định và dự
+          đoán xu hướng.Khoa học dữ liệu tập trung vào việc thu thập, làm sạch, phân tích và trình bày dữ liệu để tìm ra
+          thông tin có ích.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card fade-in" style="--card-color: #f59e0b">
+          <div class="card-icon" style="background: rgba(245, 158, 11, 0.15)">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="card-title">Machine Learning &amp; Deep Learning</h3>
+          <p class="card-desc">
+            <strong style="color: var(--txt);"> Machine Learning</strong>, hay học máy, là phương pháp giúp máy tính học
+            từ dữ liệu thay vì phải lập trình từng quy
+            tắc cụ thể. Ví dụ, hệ thống có thể học từ hàng nghìn hình ảnh để phân biệt chó và mèo.
+            <br><br>
+            <strong style="color: var(--txt);"> Deep Learning</strong>, hay học sâu, là một nhánh nâng cao của học máy.
+            Công nghệ này thường được dùng trong nhận
+            dạng giọng nói, nhận dạng hình ảnh, dịch ngôn ngữ và tạo nội dung bằng AI.
+            <br><br>
+            Người mới không cần nhớ quá nhiều tên công cụ ngay từ đầu. Điều quan trọng là hiểu rằng máy học hoạt động
+            dựa trên dữ liệu: dữ liệu càng tốt thì kết quả dự đoán càng chính xác.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">ML Engineer</span>
+              <span class="tag">AI Researcher</span>
+              <span class="tag">Deep Learning Engineer</span>
+              <span class="tag">Computer Vision Eng.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #06b6d4">
+          <div class="card-icon" style="background: rgba(6, 182, 212, 0.15)">
+            <i class="fa-solid fa-chart-column"></i>
+          </div>
+          <h3 class="card-title">Phân tích &amp; Khoa học Dữ liệu</h3>
+          <p class="card-desc">
+            Phân tích dữ liệu là công việc biến các con số và thông tin rời rạc thành kết luận có ích. Ví dụ, một cửa
+            hàng có thể phân tích dữ liệu bán hàng để biết sản phẩm nào bán chạy, khách hàng thường mua vào thời điểm
+            nào và nên nhập thêm mặt hàng nào.
+            <br><br>
+            Data Analyst thường tập trung vào báo cáo, biểu đồ và phân tích số liệu.
+            <br><br>
+            Data Scientist thường làm các bài toán dự đoán phức tạp hơn, ví dụ dự đoán hành vi khách hàng hoặc phát hiện
+            rủi ro.
+            <br><br>
+            Data Engineer là người xây dựng hệ thống thu thập và xử lý dữ liệu. Có thể hiểu đơn giản, họ tạo ra “đường
+            ống dữ liệu” để dữ liệu đi từ nơi phát sinh đến nơi phân tích một cách tự động.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Data Scientist</span>
+              <span class="tag">Data Analyst</span>
+              <span class="tag">Data Engineer</span>
+              <span class="tag">BI Developer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #ec4899">
+          <div class="card-icon" style="background: rgba(236, 72, 153, 0.15)">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="card-title">Generative AI &amp; Xử lý Ngôn ngữ</h3>
+          <p class="card-desc">
+
+            Generative AI là công nghệ AI có khả năng tạo ra nội dung mới như văn bản, hình ảnh, âm thanh, video hoặc mã
+            lập trình. Các chatbot thông minh hiện nay là ví dụ rất dễ thấy của lĩnh vực này.
+            <br><br>
+            Xử lý ngôn ngữ tự nhiên là mảng giúp máy tính hiểu và tạo ra ngôn ngữ của con người. Công nghệ này được dùng
+            trong chatbot, trợ lý ảo, dịch máy, tóm tắt văn bản và phân tích cảm xúc của người dùng.
+            <br><br>
+            Large Language Model, hay mô hình ngôn ngữ lớn, có thể hiểu đơn giản là hệ thống AI được học từ lượng văn
+            bản rất lớn để có
+            khả năng trả lời, viết nội dung và hỗ trợ nhiều công việc khác nhau.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">NLP Engineer</span>
+              <span class="tag">Prompt Engineer</span>
+              <span class="tag">LLM Researcher</span>
+              <span class="tag">GenAI Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+     MẢNG 3: AN NINH MẠNG
+     ============================================= -->
+  <section class="section" id="mang-03">
+    <div class="container">
+      <div class="th">
+        <span class="label">Mảng 03</span>
+        <h2 class="title">An ninh Mạng <span>(Cybersecurity)</span></h2>
+        <div class="bar"></div>
+        <p class="desc" style="margin-top: 0.9rem">
+          Khi mọi thứ đều kết nối Internet, bảo vệ tài sản số trở thành nhiệm
+          vụ sống còn đối với mọi tổ chức và cá nhân.
+        </p>
+      </div>
+
+      <div style="
+            background: var(--bg2);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-left: 4px solid #ef4444;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+          ">
+        <p style="color: var(--txt2); line-height: 1.75">
+          <strong style="color: var(--txt)">An ninh mạng (Cybersecurity)</strong>
+          là lĩnh vực bảo vệ hệ thống, mạng, dữ liệu và ứng dụng khỏi các mối
+          đe dọa số. Các cuộc tấn công mạng ngày càng tinh vi và phức tạp hơn,
+          nhắm vào mọi đối tượng từ cá nhân, doanh nghiệp đến cơ sở hạ tầng
+          quốc gia. Đây là lĩnh vực đòi hỏi tư duy phản biện sắc bén và tinh
+          thần học hỏi liên tục vì kỹ thuật tấn công không ngừng tiến hóa.
+
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card fade-in" style="--card-color: #ef4444">
+          <div class="card-icon" style="background: rgba(239, 68, 68, 0.15)">
+            <i class="fa-solid fa-user-secret"></i>
+          </div>
+          <h3 class="card-title">Kiểm thử Xâm nhập</h3>
+          <p class="card-desc">
+            Kiểm thử xâm nhập là công việc đóng vai “người tấn công hợp pháp” để tìm điểm yếu trong hệ thống trước khi
+            kẻ xấu khai thác.
+            <br><br>
+            Ví dụ, chuyên gia bảo mật có thể kiểm tra xem website có lỗ hổng đăng nhập, lỗ hổng bảo mật dữ liệu hoặc lỗi
+            cấu hình hệ thống hay không. Sau đó, họ báo cáo lỗi và đề xuất cách khắc phục.
+            <br><br>
+            Công việc này đòi hỏi kiến thức kỹ thuật khá sâu, nhưng có vai trò rất quan trọng trong việc bảo vệ doanh
+            nghiệp.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Penetration Tester</span>
+              <span class="tag">Ethical Hacker</span>
+              <span class="tag">Red Team Operator</span>
+              <span class="tag">Vuln. Researcher</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #3b82f6">
+          <div class="card-icon" style="background: rgba(59, 130, 246, 0.15)">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="card-title">Phòng thủ & Giám sát An ninh </h3>
+          <p class="card-desc">
+            Nếu kiểm thử xâm nhập là phía tấn công giả lập, thì phòng thủ an ninh mạng là phía bảo vệ hệ thống thật.
+            <br><br>
+            Đội ngũ bảo mật sẽ theo dõi hệ thống, phát hiện dấu hiệu bất thường, xử lý sự cố và ngăn chặn tấn công. Ví
+            dụ, khi có người đăng nhập trái phép hoặc có mã độc xuất hiện, hệ thống giám sát sẽ cảnh báo để chuyên gia
+            bảo mật xử lý.
+            <br><br>
+            SOC có thể hiểu là trung tâm giám sát an ninh mạng, nơi các chuyên gia theo dõi và phản ứng với mối đe dọa
+            theo thời gian thực.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">SOC Analyst</span>
+              <span class="tag">Security Engineer</span>
+              <span class="tag">Incident Responder</span>
+              <span class="tag">Threat Hunter</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #10b981">
+          <div class="card-icon" style="background: rgba(16, 185, 129, 0.15)">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <h3 class="card-title">Quản trị Bảo mật &amp; Tuân thủ</h3>
+          <p class="card-desc">
+            Không phải công việc an ninh mạng nào cũng chỉ là tấn công và phòng thủ kỹ thuật. Một phần quan trọng khác
+            là xây dựng quy định, chính sách và quy trình bảo mật cho tổ chức.
+            <br><br>
+            Ví dụ, doanh nghiệp cần quy định ai được truy cập dữ liệu khách hàng, cách lưu trữ mật khẩu, cách sao lưu dữ
+            liệu và cách xử lý khi xảy ra sự cố.
+            <br><br>
+            Mảng này phù hợp với người có khả năng phân tích, quản lý rủi ro và giao tiếp tốt với nhiều bộ phận trong
+            doanh nghiệp.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Security Architect</span>
+              <span class="tag">CISO</span>
+              <span class="tag">Compliance Analyst</span>
+              <span class="tag">DPO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+     MẢNG 4: CLOUD & NETWORKING
+     ============================================= -->
+  <section class="section" id="mang-04" style="
+        background: var(--bg2);
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      ">
+    <div class="container">
+      <div class="th">
+        <span class="label">Mảng 04</span>
+        <h2 class="title">
+          Mạng máy tính &amp; <span>Điện toán đám mây</span>
+        </h2>
+        <div class="bar"></div>
+        <p class="desc" style="margin-top: 0.9rem">
+          Hạ tầng vô hình nhưng không thể thiếu — nơi mọi dữ liệu và dịch vụ
+          số được lưu trữ, truyền tải và phân phối đến người dùng cuối.
+        </p>
+      </div>
+
+      <div style="
+            background: var(--bg);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-left: 4px solid #06b6d4;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+          ">
+        <p style="color: var(--txt2); line-height: 1.75">
+          <strong style="color: var(--txt);">Mạng máy tính và điện toán đám mây</strong> là nền tảng giúp các hệ thống
+          công nghệ hoạt động ổn định. Nếu ví phần mềm
+          là ngôi nhà, thì mạng, máy chủ và cloud chính là phần hạ tầng bên dưới.Mảng này liên quan đến việc kết nối máy
+          tính, quản lý máy chủ, lưu trữ dữ liệu, triển khai dịch vụ và đảm bảo hệ thống luôn hoạt động tốt.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card fade-in" style="--card-color: #06b6d4">
+          <div class="card-icon" style="background: rgba(6, 182, 212, 0.15)">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3 class="card-title">Quản trị Mạng &amp; Hạ tầng Hệ thống</h3>
+          <p class="card-desc">
+            Quản trị mạng là công việc thiết kế, cấu hình và duy trì hệ thống mạng trong doanh nghiệp. Ví dụ như kết nối
+            Internet, mạng nội bộ, hệ thống Wi-Fi, máy chủ, tường lửa và thiết bị lưu trữ.
+            <br><br>
+            Quản trị hệ thống là công việc quản lý máy chủ, tài khoản người dùng, phần mềm hệ thống, sao lưu dữ liệu và
+            xử lý sự cố kỹ thuật.
+            <br><br>
+            Đây là mảng nền tảng, xuất hiện trong hầu hết các tổ chức có sử dụng hệ thống CNTT.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Network Engineer</span>
+              <span class="tag">SysAdmin</span>
+              <span class="tag">Network Architect</span>
+              <span class="tag">IT Infrastructure</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #f59e0b">
+          <div class="card-icon" style="background: rgba(245, 158, 11, 0.15)">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <h3 class="card-title">Cloud Engineering &amp; DevOps</h3>
+          <p class="card-desc">
+            Điện toán đám mây, hay Cloud Computing, có thể hiểu đơn giản là việc thuê máy chủ, lưu trữ và dịch vụ công
+            nghệ qua Internet thay vì tự mua và vận hành toàn bộ máy chủ vật lý.
+            <br><br>
+            Ví dụ, một website có thể được triển khai trên các nền tảng cloud để dễ mở rộng khi có nhiều người truy cập.
+
+            DevOps là cách làm việc kết hợp giữa phát triển phần mềm và vận hành hệ thống. Mục tiêu là giúp phần mềm
+            được cập nhật nhanh hơn, ít lỗi hơn và vận hành ổn định hơn.
+            <br><br>
+            Các công cụ như Docker, Kubernetes hay CI/CD là những công cụ hỗ trợ quá trình triển khai và quản lý phần
+            mềm. Với người mới, chỉ cần hiểu đơn giản rằng chúng giúp việc đưa sản phẩm từ máy lập trình viên lên môi
+            trường thật trở nên tự động và an toàn hơn.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Cloud Architect</span>
+              <span class="tag">DevOps Engineer</span>
+              <span class="tag">SRE</span>
+              <span class="tag">Platform Engineer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #8b5cf6">
+          <div class="card-icon" style="background: rgba(139, 92, 246, 0.15)">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="card-title">Cơ sở Dữ liệu</h3>
+          <p class="card-desc">
+            Cơ sở dữ liệu là nơi lưu trữ thông tin của phần mềm. Ví dụ, một website bán hàng cần lưu thông tin tài
+            khoản, sản phẩm, đơn hàng và lịch sử thanh toán.
+            <br><br>
+            Người làm cơ sở dữ liệu sẽ thiết kế cách lưu dữ liệu, tối ưu tốc độ truy vấn, sao lưu dữ liệu và đảm bảo dữ
+            liệu được bảo vệ an toàn.
+            <br><br>
+            Ngoài cơ sở dữ liệu truyền thống, các doanh nghiệp lớn còn cần hệ thống lưu trữ và phân tích dữ liệu lớn để
+            phục vụ báo cáo, dự đoán và ra quyết định.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">DBA</span>
+              <span class="tag">Database Engineer</span>
+              <span class="tag">Data Architect</span>
+              <span class="tag">Data Warehouse Eng.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+     MẢNG 5: QA/QC
+     ============================================= -->
+  <section class="section" id="mang-05">
+    <div class="container">
+      <div class="th">
+        <span class="label">Mảng 05</span>
+        <h2 class="title">Kiểm thử Phần mềm <span>(QA/QC/Tester)</span></h2>
+        <div class="bar"></div>
+        <p class="desc" style="margin-top: 0.9rem">
+          Đảm bảo chất lượng sản phẩm trước khi đến tay người dùng — khâu
+          thiết yếu nhưng thường bị đánh giá thấp trong vòng đời phần mềm.
+        </p>
+      </div>
+
+      <div style="
+            background: var(--bg2);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-left: 4px solid #10b981;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+          ">
+        <p style="color: var(--txt2); line-height: 1.75">
+          <strong style="color: var(--txt)">Kiểm thử phần mềm (Software Testing/QA)</strong>
+          là quá trình xác minh phần mềm đáp ứng đúng yêu cầu và không có lỗi
+          là công việc kiểm tra sản phẩm trước khi đưa đến người dùng. Mục tiêu là phát hiện lỗi, đảm bảo phần mềm chạy
+          đúng yêu cầu và mang lại trải nghiệm tốt.Đây là mảng rất quan trọng trong quy trình phát triển phần mềm. Một
+          sản phẩm có giao diện đẹp và nhiều tính năng nhưng thường xuyên lỗi sẽ khó giữ chân người dùng.
+
+          Kiểm thử phần mềm cũng là một hướng đi phù hợp cho sinh viên mới bắt đầu, vì giúp người học hiểu quy trình làm
+          sản phẩm, cách viết yêu cầu và cách phát hiện lỗi.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card fade-in" style="--card-color: #10b981">
+          <div class="card-icon" style="background: rgba(16, 185, 129, 0.15)">
+            <i class="fa-solid fa-flask-vial"></i>
+          </div>
+          <h3 class="card-title">Kiểm thử Thủ công (Manual Testing)</h3>
+          <p class="card-desc">
+            Kiểm thử thủ công là việc người kiểm thử trực tiếp sử dụng phần mềm như người dùng thật để phát hiện lỗi.
+            <br><br>
+            Ví dụ, tester sẽ kiểm tra xem nút đăng nhập có hoạt động không, form đăng ký có báo lỗi đúng không, giỏ hàng
+            có tính tiền chính xác không hoặc giao diện có hiển thị tốt trên điện thoại không.
+            <br><br>
+            Kỹ năng quan trọng của kiểm thử thủ công là cẩn thận, biết đặt câu hỏi, viết test case rõ ràng và mô tả lỗi
+            dễ hiểu để lập trình viên sửa.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Manual Tester</span>
+              <span class="tag">QA Engineer</span>
+              <span class="tag">QC Specialist</span>
+              <span class="tag">UAT Coordinator</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #3b82f6">
+          <div class="card-icon" style="background: rgba(59, 130, 246, 0.15)">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="card-title">Kiểm thử Tự động (Automation Testing)</h3>
+          <p class="card-desc">
+            Kiểm thử tự động là việc viết chương trình để tự động kiểm tra phần mềm. Thay vì kiểm tra đi kiểm tra lại
+            bằng tay, tester có thể viết kịch bản kiểm thử để máy tính tự chạy.
+            <br><br>
+            Cách làm này giúp tiết kiệm thời gian, đặc biệt với các chức năng phải kiểm tra nhiều lần như đăng nhập,
+            thanh toán, tìm kiếm hoặc gửi biểu mẫu.
+            <br><br>
+            Người làm kiểm thử tự động cần biết thêm lập trình và hiểu quy trình phát triển phần mềm.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Automation Tester</span>
+              <span class="tag">SDET</span>
+              <span class="tag">Test Automation Eng.</span>
+              <span class="tag">API Tester</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="--card-color: #ef4444">
+          <div class="card-icon" style="background: rgba(239, 68, 68, 0.15)">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <h3 class="card-title">Kiểm thử Hiệu năng &amp; Bảo mật</h3>
+          <p class="card-desc">
+            Kiểm thử hiệu năng là việc đánh giá phần mềm có chịu được nhiều người dùng cùng lúc hay không. Ví dụ, một
+            website bán vé cần hoạt động ổn định khi có hàng nghìn người truy cập cùng thời điểm.
+            <br><br>
+            Kiểm thử bảo mật là việc kiểm tra xem phần mềm có lỗ hổng khiến dữ liệu người dùng bị lộ hoặc tài khoản bị
+            chiếm đoạt hay không.
+            <br><br>
+            Đây là hướng kiểm thử chuyên sâu hơn, đòi hỏi kiến thức về hệ thống, mạng và bảo mật.
+          </p>
+          <div class="card-jobs">
+            <h5>Vị trí việc làm</h5>
+            <div class="tags">
+              <span class="tag">Performance Tester</span>
+              <span class="tag">Security Tester</span>
+              <span class="tag">VAPT Specialist</span>
+              <span class="tag">QA Lead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÀI NGUYÊN -->
+  <section class="section" style="
+        background: var(--bg2);
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+      ">
+    <div class="container">
+      <div class="th">
+        <span class="label">Học tập &amp; Tham khảo</span>
+        <h2 class="title">Nguồn tài nguyên <span>hữu ích</span></h2>
+        <div class="bar"></div>
+      </div>
+      <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+          ">
+        <a href="https://roadmap.sh" target="_blank" rel="noopener" style="
+              display: flex;
+              gap: 0.9rem;
+              align-items: flex-start;
+              background: var(--bg);
+              border: 1px solid rgba(148, 163, 184, 0.25);
+              border-radius: 12px;
+              padding: 1rem;
+              transition: border-color 0.3s;
+            " onmouseover="this.style.borderColor = 'var(--accent)'"
+          onmouseout="this.style.borderColor = 'rgba(148, 163, 184, 0.25)'">
+          <span style="font-size: 1.5rem; flex-shrink: 0"><i class="fa-solid fa-map-location-dot"></i></span>
+          <div>
+            <p style="
+                  font-size: 0.88rem;
+                  font-weight: 700;
+                  color: var(--txt);
+                  margin-bottom: 0.2rem;
+                ">
+              Roadmap.sh
+            </p>
+            <p style="font-size: 0.78rem; color: var(--txt2)">
+              Lộ trình học tập trực quan cho mọi vai trò IT.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://topdev.vn/blog/category/it-careers/" target="_blank" rel="noopener" style="
+              display: flex;
+              gap: 0.9rem;
+              align-items: flex-start;
+              background: var(--bg);
+              border: 1px solid rgba(148, 163, 184, 0.25);
+              border-radius: 12px;
+              padding: 1rem;
+              transition: border-color 0.3s;
+            " onmouseover="this.style.borderColor = 'var(--accent)'"
+          onmouseout="this.style.borderColor = 'rgba(148, 163, 184, 0.25)'">
+          <span style="font-size: 1.5rem; flex-shrink: 0"><i class="fa-solid fa-bullseye"></i></span>
+          <div>
+            <p style="
+                  font-size: 0.88rem;
+                  font-weight: 700;
+                  color: var(--txt);
+                  margin-bottom: 0.2rem;
+                ">
+              TopDev IT Careers
+            </p>
+            <p style="font-size: 0.78rem; color: var(--txt2)">
+              Danh mục nghề nghiệp IT tại Việt Nam — mô tả vai trò, kỹ năng
+              cần thiết.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://www.coursera.org" target="_blank" rel="noopener" style="
+              display: flex;
+              gap: 0.9rem;
+              align-items: flex-start;
+              background: var(--bg);
+              border: 1px solid rgba(148, 163, 184, 0.25);
+              border-radius: 12px;
+              padding: 1rem;
+              transition: border-color 0.3s;
+            " onmouseover="this.style.borderColor = 'var(--accent)'"
+          onmouseout="this.style.borderColor = 'rgba(148, 163, 184, 0.25)'">
+          <span style="font-size: 1.5rem; flex-shrink: 0"><i class="fa-solid fa-book-open"></i></span>
+          <div>
+            <p style="
+                  font-size: 0.88rem;
+                  font-weight: 700;
+                  color: var(--txt);
+                  margin-bottom: 0.2rem;
+                ">
+              Coursera
+            </p>
+            <p style="font-size: 0.78rem; color: var(--txt2)">
+              Khóa học CNTT trực tuyến từ các trường đại học hàng đầu thế
+              giới.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://github.com" target="_blank" rel="noopener" style="
+              display: flex;
+              gap: 0.9rem;
+              align-items: flex-start;
+              background: var(--bg);
+              border: 1px solid rgba(148, 163, 184, 0.25);
+              border-radius: 12px;
+              padding: 1rem;
+              transition: border-color 0.3s;
+            " onmouseover="this.style.borderColor = 'var(--accent)'"
+          onmouseout="this.style.borderColor = 'rgba(148, 163, 184, 0.25)'">
+          <span style="font-size: 1.5rem; flex-shrink: 0"><i class="fa-solid fa-laptop-code"></i></span>
+          <div>
+            <p style="
+                  font-size: 0.88rem;
+                  font-weight: 700;
+                  color: var(--txt);
+                  margin-bottom: 0.2rem;
+                ">
+              GitHub
+            </p>
+            <p style="font-size: 0.78rem; color: var(--txt2)">
+              Nền tảng lưu trữ mã nguồn và cộng đồng lập trình viên lớn nhất
+              thế giới.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="brand-name">IT<span>Insight</span></div>
+          </a>
+          <p>
+            Báo cáo chuyên đề tổng quan ngành Công nghệ Thông tin — tài liệu
+            học thuật, năm học 2026–2027.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Điều hướng</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="categories.html">Các mảng ngành</a></li>
+            <li><a href="future.html">Tiềm năng tương lai</a></li>
+            <li><a href="contact.html">Liên hệ &amp; Góp ý</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Thông tin báo cáo</h4>
+          <ul class="footer-links">
+            <li><a href="#">Môn học: Nhập môn CNTT</a></li>
+            <li><a href="#">Năm học: 2026 – 2027</a></li>
+            <li><a href="#">Trường: Học Viện Phụ Nữ VN</a></li>
+            <li><a href="contact.html">Góp ý nội dung</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2027 ITInsight · Thực hiện bởi
+          <a href="contact.html">Nguyễn Quốc Trung</a> — MSSV 2574820220
+        </p>
+        <p>Tài liệu học thuật — Không dùng cho mục đích thương mại.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const t = document.getElementById("navToggle"),
+      m = document.getElementById("navMenu");
+    t.addEventListener("click", () => m.classList.toggle("open"));
+    m.querySelectorAll(".nav-link").forEach((l) =>
+      l.addEventListener("click", () => m.classList.remove("open")),
+    );
+
+    // Submenu (dropdown) handling
+    document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        btn.closest(".nav-item").classList.toggle("open");
+      });
+    });
+    m.querySelectorAll(".dropdown-link").forEach((l) =>
+      l.addEventListener("click", () => m.classList.remove("open")),
+    );
+  </script>
+</body>
+
+</html>
